@@ -54,7 +54,7 @@ export default function Dashboard() {
             {/* What's Due section (Table style) */}
             <section className="md:w-1/2">
               <div className="bg-gray-800 p-4 rounded-lg shadow">
-                <h2 className="text-xl font-semibold mb-4 text-center">What's Due</h2>
+                <h2 className="text-xl font-semibold mb-4 text-center">What&#39;s Due</h2>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
