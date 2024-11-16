@@ -1,35 +1,32 @@
 'use client'
-import React from 'react'
-import Resources from './Resources';
-import WhatsDue from './WhatsDue';
-import UpNext from './UpNext';
-import { useUser } from '@clerk/nextjs';
+import Resources from "./Resources";
+import UpNext from "./UpNext";
+import WhatsDue from "./WhatsDue";
+import { useUser } from "@clerk/nextjs"
 
 export default function Dashboard() {
-  const {user} = useUser();
-  const firstName = user?.firstName || "Explorer"// This will be replaced with actual auth later
-
-  // Sample data for the calendar
-  const calendarEvents = [
-    { date: "2023-11-15", title: "Team Meeting" },
-    { date: "2023-11-16", title: "Project Deadline" },
-    { date: "2023-11-18", title: "Presentation" },
-  ]
-
-  // Sample data for What's Due
-  const dueItems = [
-    { assignment: "Research Paper", date: "2023-11-20", status: "In Progress" },
-    { assignment: "Math Problem Set", date: "2023-11-22", status: "Not Started" },
-    { assignment: "History Essay", date: "2023-11-25", status: "Completed" },
-  ]
-
-  // Sample data for Resources
-  const resources = [
-    { title: "Library", url: "#", icon: "📚" },
-    { title: "Study Guide", url: "#", icon: "📖" },
-    { title: "Calculator", url: "#", icon: "🧮" },
-    { title: "Writing Center", url: "#", icon: "✍️" },
-  ]
+    const {user} = useUser();
+    const firstName = user?.firstName || "Explorer" // This will be replaced with actual auth later
+  
+    // Sample data for the calendar
+    const calendarEvents = [
+      { date: "2024-11-15", title: "Updates and Checkpoints Due" },
+      { date: "2024-11-16", title: "Livestream 2" },
+    ] 
+  
+    // Sample data for What's Due
+    const dueItems = [
+      { assignment: "Update 1", date: "20234-11-16", status: "In Progress" },
+      { assignment: "Update 2", date: "2024-11-16", status: "Not Started" },
+      { assignment: "Checkpoint 1", date: "2024-11-16", status: "Not Started" },
+    ]
+  
+    // Sample data for Resources
+    const resources = [
+      { title: "Buildspace Slides", url: "#", icon: "" },
+      { title: "YCombinator Recs", url: "#", icon: "" },
+      { title: "Frontera Slides", url: "#", icon: "" },
+    ]
 
   return (
     <div className="min-h-screen bg-black text-white">
