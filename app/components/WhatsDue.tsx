@@ -13,7 +13,7 @@ type WhatsDueProps = {
 export default function WhatsDue({ dueItems }: WhatsDueProps) {
   return (
     <div className="bg-gray-800 p-4 rounded-lg shadow">
-      <h2 className="text-xl font-semibold mb-4 text-center">What's Due</h2>
+      <h2 className="text-xl font-semibold mb-4 text-center">What&apos;s Due</h2>
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
