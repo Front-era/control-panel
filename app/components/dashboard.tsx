@@ -16,7 +16,7 @@ export default function Dashboard() {
   
     // Sample data for What's Due
     const dueItems = [
-      { assignment: "Update 1", date: "20234-11-16", status: "In Progress" },
+      { assignment: "Update 1", date: "2024-11-16", status: "In Progress" },
       { assignment: "Update 2", date: "2024-11-16", status: "Not Started" },
       { assignment: "Checkpoint 1", date: "2024-11-16", status: "Not Started" },
     ]

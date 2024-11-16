@@ -32,19 +32,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-    <html lang="en">
-    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+<ClerkProvider >
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <SignedOut>
-            <SignInButton />
-            <LoggedOut />
+            <div className="flex justify-end p-4">
+              <SignInButton fallbackRedirectUrl={"/dashboard"}/>
+              </div>
+              <LoggedOut />
           </SignedOut>
           <SignedIn>
-            <UserButton />
+            <div className="flex justify-end p-4">
+              <UserButton />
+              </div>
+              {children}
           </SignedIn>
-          {children}
-        </body> 
-    </html>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
